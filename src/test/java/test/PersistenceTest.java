@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.*;
  * failing. However running this test using EclipseLink (mvn -Peclipselink verify) will pass both tests.
  *
  * The problem seems to originate in <a href="https://github.com/hibernate/hibernate-orm/blob/e76241a3091078713dd4b57de085f5fadce5e0db/hibernate-core/src/main/java/org/hibernate/engine/query/spi/EntityGraphQueryHint.java#L125-L164">EntityGraphQueryHint</a>
- * which handles entity types and collection types, but not component types. Compare this to <a href="https://github.com/hibernate/hibernate-orm/blob/e76241a3091078713dd4b57de085f5fadce5e0db/hibernate-core/src/main/java/org/hibernate/engine/query/spi/EntityGraphQueryHint.java#L125-L164">EntityGraphHint</a>
+ * which handles entity types and collection types, but not component types. Compare this to <a href="https://github.com/hibernate/hibernate-orm/blob/e76241a3091078713dd4b57de085f5fadce5e0db/hibernate-core/src/main/java/org/hibernate/loader/plan/exec/internal/LoadQueryJoinAndFetchProcessor.java#L133-L154">LoadQueryJoinAndFetchProcessor</a>
  * which handles all 3.
  */
 public class PersistenceTest {
