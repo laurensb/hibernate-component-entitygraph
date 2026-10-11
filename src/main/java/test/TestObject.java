@@ -1,7 +1,7 @@
 package test;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
 public class TestObject {
@@ -9,7 +9,7 @@ public class TestObject {
     @Id
     private Integer id;
 
-    private String value;
+    private String value1;
 
     public Integer getId() {
         return id;
@@ -20,10 +20,10 @@ public class TestObject {
     }
 
     public String getValue() {
-        return value;
+        return value1;
     }
 
     public void setValue(String value) {
-        this.value = value;
+        this.value1 = value;
     }
 }

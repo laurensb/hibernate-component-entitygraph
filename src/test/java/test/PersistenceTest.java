@@ -3,8 +3,8 @@ package test;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 
 import java.util.Collections;
 
@@ -35,7 +35,7 @@ public class PersistenceTest {
         graph.addSubgraph("component").addAttributeNodes("object");
 
         // Find entity with id 42 using fetch graph
-        var a = em.find(TestEntity.class, 42, Collections.singletonMap("javax.persistence.fetchgraph", graph));
+        var a = em.find(TestEntity.class, 42, Collections.singletonMap("jakarta.persistence.fetchgraph", graph));
 
         // Closing EM to prevent lazy loading
         em.close();
@@ -56,7 +56,7 @@ public class PersistenceTest {
         // Query entity with id 42 using fetch graph
         var a = em.createQuery("from TestEntity e where e.id = :id", TestEntity.class)
                 .setParameter("id", 42)
-                .setHint("javax.persistence.fetchgraph", graph)
+                .setHint("jakarta.persistence.fetchgraph", graph)
                 .getSingleResult();
 
         // Closing EM to prevent lazy loading

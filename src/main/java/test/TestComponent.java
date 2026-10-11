@@ -1,8 +1,8 @@
 package test;
 
-import javax.persistence.Embeddable;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.ManyToOne;
 
 @Embeddable
 public class TestComponent {
